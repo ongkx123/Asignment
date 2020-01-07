@@ -1,21 +1,12 @@
 package com.example.asignment
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.ContactsContract
 import android.util.Patterns
-import android.widget.Button
-import android.widget.EditText
-import android.widget.RadioButton
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputLayout
-import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_login.buttonRegister
-import kotlinx.android.synthetic.main.activity_sign_up__from.*
-import java.util.regex.Matcher
 import java.util.regex.Pattern
 
 class SignUp_From : AppCompatActivity() {
@@ -42,7 +33,7 @@ class SignUp_From : AppCompatActivity() {
 
 
         buttonRegister.setOnClickListener{
-            buttonRegister()
+            btnRegister()
         }
     }
 
@@ -147,10 +138,14 @@ class SignUp_From : AppCompatActivity() {
         }
     }
 
-    private fun buttonRegister(){
+    private fun btnRegister(){
 
         if(!validateFullName() or  !validateUserName() or  !validateAge() or  !validateEmail() or  !validatePassword() or  !validateConfirmPassword()){
-           val fullName = textFullName!!.editText!!.text.toString().trim()
+
+            Toast.makeText(applicationContext,"Hello",Toast.LENGTH_SHORT).show()
+        }
+        else{
+            val fullName = textFullName!!.editText!!.text.toString().trim()
             val userName = textUserName!!.editText!!.text.toString().trim()
             val age = textAge!!.editText!!.text.toString().trim()
             val email = textEmail!!.editText!!.text.toString().trim()
@@ -161,8 +156,7 @@ class SignUp_From : AppCompatActivity() {
 
             val user = User(userID,fullName,userName,age,email,password)
 
-            ref.child(userID).setValue(user)
-
+            ref.child(userID).child("PEPE LEE").setValue(user)
         }
     }
 
