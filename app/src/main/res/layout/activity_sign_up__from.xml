@@ -127,7 +127,6 @@
             android:inputType="textPassword"
             android:textSize="20dp" />
     </com.google.android.material.textfield.TextInputLayout>
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputage"
             android:layout_width="match_parent"
