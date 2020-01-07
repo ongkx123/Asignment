@@ -2,7 +2,7 @@
     <string name="app_name">Asignment</string>
     <string name="fullName">Full Name</string>
     <string name="userName">User Name</string>
-    <string name="age">Age</string>
+    <string name="dob">Date of Birth</string>
     <string name="password">Password</string>
     <string name="confirmPassword">Confirm Password</string>
     <string name="email">Email</string>

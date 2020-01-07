@@ -51,7 +51,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputAge"
+        android:id="@+id/textInputDOB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -60,12 +60,12 @@
         android:textColorHint="@color/colorWord">
 
         <EditText
-            android:id="@+id/editTextAge"
+            android:id="@+id/editTextDOB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="@string/age"
-            android:inputType="text"
+            android:hint="@string/dob"
+            android:inputType="date"
             android:textSize="20dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -128,6 +128,14 @@
             android:textSize="20dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textColorHint="@color/colorWord">
     <RadioGroup
         android:id="@+id/radioGroupGender"
         android:layout_width="wrap_content"
@@ -159,7 +167,7 @@
             android:layout_marginLeft="10dp"
             android:textSize="20sp" />
     </RadioGroup>
-
+        </com.google.android.material.textfield.TextInputLayout>
         <Button
             android:id="@+id/buttonRegister"
             android:layout_width="match_parent"
