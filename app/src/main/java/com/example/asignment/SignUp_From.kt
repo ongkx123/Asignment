@@ -1,19 +1,28 @@
 package com.example.asignment
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.ContactsContract
 import android.util.Patterns
+import android.widget.Button
+import android.widget.EditText
+import android.widget.RadioButton
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputLayout
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_login.buttonRegister
+import kotlinx.android.synthetic.main.activity_sign_up__from.*
+import java.util.regex.Matcher
 import java.util.regex.Pattern
 
 class SignUp_From : AppCompatActivity() {
 
     private var textFullName : TextInputLayout? = null
     private var textUserName : TextInputLayout? = null
-    private var textAge : TextInputLayout? = null
+    private var textDOB : TextInputLayout? = null
     private var textEmail : TextInputLayout? = null
     private var textPassword : TextInputLayout? = null
     private var textConfirmPassword : TextInputLayout? = null
@@ -25,7 +34,7 @@ class SignUp_From : AppCompatActivity() {
 
         textFullName =findViewById(R.id.textInputFullName)
         textUserName =findViewById(R.id.textInputUserName)
-        textAge =findViewById(R.id.textInputAge)
+        textDOB =findViewById(R.id.textInputDOB)
         textEmail =findViewById(R.id.textInputEmail)
         textPassword =findViewById(R.id.textInputPassword)
         textConfirmPassword =findViewById(R.id.textInputConfirmPassword)
@@ -33,7 +42,7 @@ class SignUp_From : AppCompatActivity() {
 
 
         buttonRegister.setOnClickListener{
-            btnRegister()
+            buttonRegister()
         }
     }
 
@@ -69,16 +78,16 @@ class SignUp_From : AppCompatActivity() {
         }
     }
 
-    private fun validateAge():Boolean{
+    private fun validateDOB():Boolean{
 
-        val age = textAge!!.editText!!.text.toString().trim()
+        val age = textDOB!!.editText!!.text.toString().trim()
 
         if (age.isEmpty()){
-            textAge!!.error = "Field can't be empty"
+            textDOB!!.error = "Field can't be empty"
             return false
         }
         else{
-            textAge!!.error = null
+            textDOB!!.error = null
             return true
         }
     }
@@ -138,25 +147,26 @@ class SignUp_From : AppCompatActivity() {
         }
     }
 
-    private fun btnRegister(){
+    private fun buttonRegister(){
 
-        if(!validateFullName() or  !validateUserName() or  !validateAge() or  !validateEmail() or  !validatePassword() or  !validateConfirmPassword()){
-
-            Toast.makeText(applicationContext,"Hello",Toast.LENGTH_SHORT).show()
-        }
-        else{
-            val fullName = textFullName!!.editText!!.text.toString().trim()
+        if(validateFullName() or  validateUserName() or  validateDOB() or  validateEmail() or  validatePassword() or  validateConfirmPassword()){
+           val fullName = textFullName!!.editText!!.text.toString().trim()
             val userName = textUserName!!.editText!!.text.toString().trim()
-            val age = textAge!!.editText!!.text.toString().trim()
+            val dob = textDOB!!.editText!!.text.toString().trim()
             val email = textEmail!!.editText!!.text.toString().trim()
             val password = textPassword!!.editText!!.text.toString().trim()
 
             val ref = FirebaseDatabase.getInstance().getReference("user")
             val userID = ref.push().key.toString()
 
-            val user = User(userID,fullName,userName,age,email,password)
+            val user = User(userID,fullName,userName,dob,email,password)
 
-            ref.child(userID).child("PEPE LEE").setValue(user)
+            ref.child(userID).setValue(user).addOnCompleteListener{
+                Toast.makeText(applicationContext,"Successfully register",Toast.LENGTH_LONG)
+                val intent = Intent(applicationContext,Login::class.java)
+                startActivity(intent)
+            }
+
         }
     }
 
