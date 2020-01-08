@@ -19,12 +19,12 @@ class HomeAdapter(val postList: ArrayList<HomeModel>):RecyclerView.Adapter<HomeA
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val post:HomeModel = postList[position]
+        //val post:HomeModel = postList[position]
         
     }
 
 
     class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
-
+        //
     }
 }
