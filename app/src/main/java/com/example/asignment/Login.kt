@@ -47,7 +47,7 @@ class Login : AppCompatActivity() {
                         if(user == name && password == passwordText){
                             Toast.makeText(this@Login,"Successfull Login",Toast.LENGTH_SHORT).show()
 
-                            val intent = Intent(applicationContext,Image::class.java)
+                            val intent = Intent(applicationContext,DisplayImages::class.java)
                             startActivity(intent)
                         }
                     }
