@@ -47,7 +47,7 @@ class Login : AppCompatActivity() {
                         if(user == name && password == passwordText){
                             Toast.makeText(this@Login,"Successfull Login",Toast.LENGTH_SHORT).show()
 
-                            val intent = Intent(applicationContext,FragmentActivity::class.java)
+                            val intent = Intent(applicationContext,Accounting::class.java)
                             startActivity(intent)
                         }
                     }

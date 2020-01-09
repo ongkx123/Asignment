@@ -4,35 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Image">
+    tools:context=".Accounting">
 
-    <Button
-        android:id="@+id/buttonUploadFIle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="UploadFile"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="415dp"
+        android:layout_height="254dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageViewUpload"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/buttonUploadFIle"
+        android:layout_marginTop="36dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/webView" />
 
-    <Button
-        android:id="@+id/buttonChoose"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Choose"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonUploadFIle" />
+        tools:layout_editor_absoluteY="371dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
