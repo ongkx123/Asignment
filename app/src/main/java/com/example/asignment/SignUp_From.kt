@@ -150,7 +150,7 @@ class SignUp_From : AppCompatActivity() {
     private fun buttonRegister(){
 
         if(validateFullName() or  validateUserName() or  validateDOB() or  validateEmail() or  validatePassword() or  validateConfirmPassword()){
-           val fullName = textFullName!!.editText!!.text.toString().trim()
+            val fullName = textFullName!!.editText!!.text.toString().trim()
             val userName = textUserName!!.editText!!.text.toString().trim()
             val dob = textDOB!!.editText!!.text.toString().trim()
             val email = textEmail!!.editText!!.text.toString().trim()
