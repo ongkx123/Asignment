@@ -14,8 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Videos"></activity>
-        <activity android:name=".videos" />
+        <activity android:name=".DisplayImages"></activity>
         <activity android:name=".UploadResources" />
         <activity android:name=".Image" />
         <activity android:name=".Login" />
@@ -25,7 +24,7 @@
             android:name=".SignUp_From"
             android:label="Sign Up" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".DisplayImages">
+        <activity android:name=".Accounting">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
