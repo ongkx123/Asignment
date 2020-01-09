@@ -25,13 +25,13 @@ class Image : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if(requestCode == PICK_IMAGE_CODE) {
             //alertDialog.show()
-            val uploadTask = storageReference!!.putFile(data!!.data!!)
+            val uploadTask = storageReference.putFile(data!!.data!!)
             val task = uploadTask.continueWithTask {
                     task ->
                 if (!task.isSuccessful) {
                     Toast.makeText(this,"Failed",Toast.LENGTH_SHORT).show()
                 }
-                storageReference!!.downloadUrl
+                storageReference.downloadUrl
 
             }.addOnCompleteListener {task ->
                 if(task.isSuccessful) {

@@ -19,6 +19,6 @@ class DisplayImages : AppCompatActivity() {
     }
 
     private fun displayImage(){
-        val url = storage.reference
+        //val url = storage.reference
     }
 }

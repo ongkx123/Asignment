@@ -14,16 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".reward"></activity>
-        <activity android:name=".test">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".Search" />
-        <activity android:name=".Videos" />
+        <activity android:name=".Videos"></activity>
+        <activity android:name=".videos" />
         <activity android:name=".UploadResources" />
         <activity android:name=".Image" />
         <activity android:name=".Login" />
@@ -33,6 +25,13 @@
             android:name=".SignUp_From"
             android:label="Sign Up" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".DisplayImages">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
