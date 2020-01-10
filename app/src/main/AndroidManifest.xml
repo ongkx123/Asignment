@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.asignment">
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,15 +13,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Image"></activity>
+        <activity android:name=".FragmentActivity"></activity>
+        <activity android:name=".Image" />
         <activity android:name=".Menu" />
-        <activity android:name=".FragmentActivity" />
+        <activity android:name=".Login" />
         <activity
-            android:name=".SignUp_From"
+            android:name=".videoList"
             android:label="Sign Up" />
         <activity android:name=".MainActivity" />
         <activity
-            android:name=".Login"
+            android:name=".DisplayImages"
             android:label="Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
