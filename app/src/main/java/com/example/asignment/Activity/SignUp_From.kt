@@ -1,21 +1,15 @@
-package com.example.asignment
+package com.example.asignment.Activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.ContactsContract
 import android.util.Patterns
-import android.widget.Button
-import android.widget.EditText
-import android.widget.RadioButton
 import android.widget.Toast
+import com.example.asignment.Class.User
+import com.example.asignment.R
 import com.google.android.material.textfield.TextInputLayout
-import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_login.buttonRegister
-import kotlinx.android.synthetic.main.activity_sign_up__from.*
-import java.util.regex.Matcher
 import java.util.regex.Pattern
 
 class SignUp_From : AppCompatActivity() {
@@ -26,7 +20,6 @@ class SignUp_From : AppCompatActivity() {
     private var textEmail : TextInputLayout? = null
     private var textPassword : TextInputLayout? = null
     private var textConfirmPassword : TextInputLayout? = null
-   // private lateinit var database: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -155,15 +148,24 @@ class SignUp_From : AppCompatActivity() {
             val dob = textDOB!!.editText!!.text.toString().trim()
             val email = textEmail!!.editText!!.text.toString().trim()
             val password = textPassword!!.editText!!.text.toString().trim()
-
+            val marks:Int = 0
             val ref = FirebaseDatabase.getInstance().getReference("user")
             val userID = ref.push().key.toString()
 
-            val user = User(userID,fullName,userName,dob,email,password)
+            val user = User(
+                userID,
+                fullName,
+                userName,
+                dob,
+                email,
+                password,
+                marks
+            )
 
             ref.child(userID).setValue(user).addOnCompleteListener{
                 Toast.makeText(applicationContext,"Successfully register",Toast.LENGTH_LONG)
-                val intent = Intent(applicationContext,Login::class.java)
+                val intent = Intent(applicationContext,
+                    Login::class.java)
                 startActivity(intent)
             }
 

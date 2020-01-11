@@ -1,13 +1,10 @@
-package com.example.asignment
+package com.example.asignment.Activity
 
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
-import android.widget.Toast
-import com.example.asignment.test
+import com.example.asignment.R
 import kotlinx.android.synthetic.main.activity_test.*
 
 class test : AppCompatActivity() {
@@ -158,15 +155,17 @@ class test : AppCompatActivity() {
 
         }
 
-val sharedPreferences=getSharedPreferences("correctAns",Context.MODE_PRIVATE)
-       buttonConfirm.setOnClickListener{
+        val sharedPreferences=getSharedPreferences("correctAns",Context.MODE_PRIVATE)
+            buttonConfirm.setOnClickListener{
 
-           val crtAns=Integer.parseInt(correctAns.toString())
-           val editor=sharedPreferences.edit()
-           editor.putInt("correctAns",crtAns)
-           editor.apply()
-           val intent= Intent(this,reward::class.java)
-           startActivity(intent)
+            val crtAns=Integer.parseInt(correctAns.toString())
+
+            val editor=sharedPreferences.edit()
+            editor.putInt("correctAns",crtAns)
+            editor.apply()
+
+                val intent= Intent(this, reward::class.java)
+                startActivity(intent)
        }
     }
 

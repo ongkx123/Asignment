@@ -1,18 +1,17 @@
-package com.example.asignment
+package com.example.asignment.Activity
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.example.asignment.R
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.squareup.picasso.Picasso
-import dmax.dialog.SpotsDialog
 import kotlinx.android.synthetic.main.activity_image.*
 
-class Image : AppCompatActivity() {
+class UploadImage : AppCompatActivity() {
 
     //lateinit var alertDialog: AlertDialog
     lateinit var storageReference:StorageReference
@@ -57,7 +56,9 @@ class Image : AppCompatActivity() {
             val intent = Intent()
             intent.type = "image/*"
             intent.action = Intent.ACTION_GET_CONTENT
-            startActivityForResult(Intent.createChooser(intent,"Select Picture"),PICK_IMAGE_CODE)
+            startActivityForResult(Intent.createChooser(intent,"Select Picture"),
+                PICK_IMAGE_CODE
+            )
 
            //intent.type = "video"
         }

@@ -1,8 +1,10 @@
-package com.example.asignment
+package com.example.asignment.Activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
+import com.example.asignment.R
 import kotlinx.android.synthetic.main.activity_display_images.*
 
 class displayImages : AppCompatActivity() {
@@ -36,5 +38,31 @@ class displayImages : AppCompatActivity() {
             val url6: String =
                 "https://firebasestorage.googleapis.com/v0/b/asignment-d6622.appspot.com/o/image%2Fsoftware.jpg?alt=media&token=4e228a52-7aee-44af-8e56-1034b0ab7b36"
             Glide.with(applicationContext).load(url6).into(imageView6)
+
+            imageView.setOnClickListener{
+                val intent = Intent(applicationContext,DisplayArticleList::class.java)
+                startActivity(intent)
+            }
+            imageView2.setOnClickListener{
+                val intent = Intent(applicationContext,DisplayArticleList::class.java)
+                startActivity(intent)
+            }
+            imageView3.setOnClickListener{
+                val intent = Intent(applicationContext,DisplayArticleList::class.java)
+                startActivity(intent)
+            }
+            imageView4.setOnClickListener{
+                val intent = Intent(applicationContext,DisplayArticleList::class.java)
+                startActivity(intent)
+            }
+            imageView5.setOnClickListener{
+                val intent = Intent(applicationContext,DisplayArticleList::class.java)
+                startActivity(intent)
+            }
+            imageView6.setOnClickListener{
+                val intent = Intent(applicationContext,DisplayArticleList::class.java)
+                startActivity(intent)
+            }
+
         }
     }
