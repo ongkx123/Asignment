@@ -13,7 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".videoList"></activity>
+        <activity android:name=".displayImages"
+            android:label="@string/course">
+        </activity>
+        <activity android:name=".videoList" />
         <activity android:name=".FavouriteActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".HomeActivity" />
@@ -27,7 +30,7 @@
         <activity android:name=".MainActivity" />
         <activity
             android:name=".Login"
-            android:label="Login">
+            android:label="@string/login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -25,13 +25,13 @@ class reward : AppCompatActivity() {
         val answer =crtAnswer.toString()
         if(crtAnswer>3){
 
-            imageView3.setImageResource(R.drawable.award)
+            imageViewReward.setImageResource(R.drawable.award)
             textViewComment.text="Congratulations!! You have scored" + answer + "correct"
 
 
         }
         else{
-            imageView3.setImageResource(R.drawable.download)
+            imageViewReward.setImageResource(R.drawable.download)
             textViewComment.text="You got" + answer + "correct,Try harder next time"
         }
     }
