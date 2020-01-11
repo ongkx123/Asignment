@@ -19,21 +19,21 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/accoutingTitle"
+        android:text="@string/accountingTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/webView"
-        tools:text="@string/accoutingTitle" />
+        tools:text="@string/accountingTitle" />
 
     <TextView
         android:id="@+id/textViewDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/accounting"
+        android:text="@string/accountingDescription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
-        tools:text="@string/accounting" />
+        tools:text="@string/accountingDescription" />
 </androidx.constraintlayout.widget.ConstraintLayout>

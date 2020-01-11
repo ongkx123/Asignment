@@ -2,11 +2,15 @@ package com.example.asignment
 
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.FirebaseDatabase
@@ -15,6 +19,7 @@ import kotlinx.android.synthetic.main.fragment_home.*
 /**
  * A simple [Fragment] subclass.
  */
+
 class HomeFragment : Fragment() {
 
     lateinit var recycleV :RecyclerView
@@ -24,18 +29,16 @@ class HomeFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-
+        editTextStatus.requestFocus()
         val rv = inflater.inflate(R.layout.fragment_home,container,false)
-        recycleV = rv.findViewById(R.id.recycleViewHome)
+        recycleV = rv.findViewById(R.id.recycleVIewHome)
+        var buttonSend = rv.findViewById<Button>(R.id.buttonSend)
         recycleV.layoutManager = LinearLayoutManager(activity)
         recycleV.adapter = HomeAdapter(rv.context)
-        return rv
-
-
         buttonSend.setOnClickListener{
             send(rv)
         }
-
+        return rv
 
        /*postList = ArrayList<Home>()
 
@@ -46,22 +49,28 @@ class HomeFragment : Fragment() {
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)*/
 
+
+
     }
     private fun send(view: View){
 
-        val status = editStatus.text.toString()
-        val likes = 1
+        val stat = view.findViewById<EditText>(R.id.editTextStatus)
+        stat.requestFocusFromTouch()
+        editTextStatus.requestFocus()
+        /*val likes = 1
         val comments = 1
-        val userName = "AAA"
+        val userName = "AAA"*/
 
-        val ref = FirebaseDatabase.getInstance().getReference("user")
+        val ref = FirebaseDatabase.getInstance().getReference("home")
 
-        val home = Home(status,likes,comments,userName)
+        //Toast.makeText(context,stat,Toast.LENGTH_SHORT).show()
+
+        /*val home = Home(status,likes,comments,userName)
 
         ref.child("Home").setValue(home)
 
         postList.add(home)
-        recycleV.adapter = HomeAdapter(view.context)
+        recycleV.adapter = HomeAdapter(view.context)*/
     }
 
 

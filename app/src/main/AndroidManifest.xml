@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
@@ -14,18 +13,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Videos"></activity>
-        <activity android:name=".videos" />
-        <activity android:name=".UploadResources" />
+        <activity android:name=".videoList"></activity>
+        <activity android:name=".FavouriteActivity" />
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".RetrieveImage" />
         <activity android:name=".Image" />
-        <activity android:name=".Login" />
         <activity android:name=".Menu" />
         <activity android:name=".FragmentActivity" />
         <activity
             android:name=".SignUp_From"
             android:label="Sign Up" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".DisplayImages">
+        <activity
+            android:name=".Login"
+            android:label="Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
