@@ -94,12 +94,19 @@ class Search : AppCompatActivity() {
 
 
 
-
                 //Toast.makeText(this@Search,value,Toast.LENGTH_SHORT).show()
             }
 
         })
 
+        buttonSignIn.setOnClickListener(){
+            val intent = Intent(applicationContext, Login::class.java)
+            startActivity(intent)
+        }
+        buttonCreate.setOnClickListener(){
+            val intent = Intent(applicationContext, SignUp_From::class.java)
+            startActivity(intent)
+        }
 
 
 

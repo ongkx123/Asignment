@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".Activity.displayImages"
+            android:label="Course"/>
         <activity android:name=".Activity.DisplayVideoList" />
         <activity android:name=".Activity.DisplayArticleList" />
         <activity android:name=".Activity.UploadImage" />
@@ -37,8 +38,8 @@
             android:label="Sign Up" />
         <activity android:name=".MainActivity" />
         <activity
-            android:name=".Activity.displayImages"
-            android:label="Course">
+            android:name=".Activity.Search"
+            android:label="Search">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

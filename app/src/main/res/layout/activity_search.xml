@@ -7,18 +7,82 @@
     android:orientation="vertical"
     tools:context=".Activity.Search">
 
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="269dp"
+        android:layout_height="254dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="354dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:text="Online Learning is not the next big things,It is the now big things" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <com.mancj.materialsearchbar.MaterialSearchBar
+        android:id="@+id/searchBar"
         style="@style/MaterialSearchBarLight"
-        app:mt_speechMode="true"
+        android:layout_width="354dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
         app:mt_hint="Custom hint"
         app:mt_maxSuggestionsCount="10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/searchBar" />
+        app:mt_placeholder="@string/action_search"
+        app:mt_speechMode="true" />
+
     <ListView
         android:id="@+id/mListView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="115dp">
 
     </ListView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/buttonSignIn"
+            android:layout_width="175dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="76dp"
+            android:background="@drawable/button_background"
+            android:text="Sign In"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttonCreate"
+            app:layout_constraintHorizontal_bias="0.326"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/buttonCreate"
+            android:layout_width="171dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="76dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/button_background"
+            android:text="Create An Account"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </LinearLayout>

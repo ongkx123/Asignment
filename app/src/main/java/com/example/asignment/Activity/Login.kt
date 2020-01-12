@@ -62,7 +62,7 @@ class Login : AppCompatActivity() {
 
                             Toast.makeText(this@Login, pName, Toast.LENGTH_SHORT).show()
 
-                            val intent = Intent(applicationContext, test::class.java)
+                            val intent = Intent(applicationContext,displayImages::class.java)
                             startActivity(intent)
                         }
                     }
