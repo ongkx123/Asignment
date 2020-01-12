@@ -54,7 +54,7 @@ class reward : AppCompatActivity() {
                 if (crtAnswer > 3) {
 
                     imageViewReward.setImageResource(R.drawable.award)
-                    textViewComment.text = "Results: " + answer +"Correct"
+                    textViewComment.text = "Results: " + answer + "Correct"
                     textView.text = "Congratulations!! You get an award"
 
                 } else {
