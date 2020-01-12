@@ -18,11 +18,11 @@
     <string name="title_notifications">Notifications</string>
     <string name="like">Like</string>
     <string name="comment">Comment</string>
-    <string name="testQ1">1)What is printf() in C++ for?</string>
-    <string name="testQ2">2)Which of the following data types suitable to store number 10?</string>
-    <string name="testQ3">3)Which of the following data types CANNOT to store value 250?</string>
-    <string name="testQ4">4)By default the members of the structure are?</string>
-    <string name="testQ5">5)The programs machine instructions are store in __ memory segment?</string>
+    <string name="testQ1">1)How many types of business transactions are there in accounting?</string>
+    <string name="testQ2">2)Which of these is not included as a separate item in the basic accounting equation?</string>
+    <string name="testQ3">3)The account format that displays debits, credits, balances, and headings.</string>
+    <string name="testQ4">4) Asset accounts have what type of balance?</string>
+    <string name="testQ5">    5)Which account increases equity?</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Hello">Hello</string>

@@ -1,5 +1,6 @@
 package com.example.asignment.Activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.asignment.R
@@ -14,5 +15,13 @@ class ArticleAccounting : AppCompatActivity() {
 
         Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/asignment-d6622.appspot.com/o/image%2Faccounting-1.jpg?alt=media&token=b12dfb2e-4331-46fa-b3ac-e6d1fbad8770").into(displayArticleImage)
 
+        buttonVideo.setOnClickListener(){
+            val intent = Intent(applicationContext,VideoAccounting::class.java)
+            startActivity(intent)
+        }
+        buttonTest.setOnClickListener(){
+            val intent = Intent(applicationContext,test::class.java)
+            startActivity(intent)
+        }
     }
 }

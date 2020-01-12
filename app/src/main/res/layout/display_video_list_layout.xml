@@ -17,7 +17,7 @@
     <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="match_parent"
-        android:layout_height="53dp"
+        android:layout_height="267dp"
         android:text="TextView"
         android:textSize="30sp"
         android:textStyle="bold" />

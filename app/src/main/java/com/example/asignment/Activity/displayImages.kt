@@ -40,7 +40,7 @@ class displayImages : AppCompatActivity() {
             Glide.with(applicationContext).load(url6).into(imageView6)
 
             imageView.setOnClickListener{
-                val intent = Intent(applicationContext,DisplayArticleList::class.java)
+                val intent = Intent(applicationContext,ArticleAccounting::class.java)
                 startActivity(intent)
             }
             imageView2.setOnClickListener{

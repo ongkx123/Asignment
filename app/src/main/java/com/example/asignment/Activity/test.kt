@@ -48,15 +48,15 @@ class test : AppCompatActivity() {
         }
         radioGroupQ2.setOnCheckedChangeListener { group, checkedId ->
             if (checkedId == R.id.radioOneQ2) {
-                correctAns++
-                q2++
-
-            }
-            if (checkedId == R.id.radioTwoQ2) {
                 if (q2 == 1) {
                     correctAns--
                     q2--
                 }
+            }
+            if (checkedId == R.id.radioTwoQ2) {
+                correctAns++
+                q2++
+
             }
             if (checkedId == R.id.radioThreeQ2) {
                 if (q2 == 1) {
@@ -106,13 +106,11 @@ class test : AppCompatActivity() {
                     correctAns--
                     q4--
                 }
-
             }
             if (checkedId == R.id.radioTwoQ4) {
-                if (q4 == 1) {
-                    correctAns--
-                    q4--
-                }
+                correctAns++
+                q4++
+
             }
             if (checkedId == R.id.radioThreeQ4) {
                 if (q4 == 1) {
@@ -121,9 +119,11 @@ class test : AppCompatActivity() {
                 }
             }
             if (checkedId == R.id.radioFourQ4) {
+                if (q4 == 1) {
+                    correctAns--
+                    q4--
+                }
 
-                    correctAns++
-                    q4++
 
             }
 

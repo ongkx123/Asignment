@@ -1,6 +1,7 @@
 package com.example.asignment.Activity
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -23,42 +24,51 @@ class reward : AppCompatActivity() {
 
         profile.addValueEventListener(object : ValueEventListener {
             override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(this@reward,"Error", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@reward, "Error", Toast.LENGTH_SHORT).show()
             }
-            val sharedPreferences=getSharedPreferences("correctAns",Context.MODE_PRIVATE)
-            val crtAnswer=sharedPreferences.getInt("correctAns",0)
-            val sharedPreferenceUser = getSharedPreferences("NAME",Context.MODE_PRIVATE)
-            val sharedName = sharedPreferenceUser.getString("NAME",""
+
+            val sharedPreferences = getSharedPreferences("correctAns", Context.MODE_PRIVATE)
+            val crtAnswer = sharedPreferences.getInt("correctAns", 0)
+            val sharedPreferenceUser = getSharedPreferences("NAME", Context.MODE_PRIVATE)
+            val sharedName = sharedPreferenceUser.getString(
+                "NAME", ""
             )
+
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                var name:String
+                var name: String
 
 
-                for(i: DataSnapshot in dataSnapshot.children.iterator()){
+                for (i: DataSnapshot in dataSnapshot.children.iterator()) {
                     val userID = profile.key.toString()
                     name = i.child("userName").value.toString()
 
-                    if(sharedName == name){
+                    if (sharedName == name) {
                         i.getRef().child("marks").setValue(crtAnswer)
-                        Toast.makeText(this@reward,"Congratulation",Toast.LENGTH_SHORT).show()
+
                     }
 
                 }
 
 
-                val answer =crtAnswer.toString()
-                 if(crtAnswer>3){
+                val answer = crtAnswer.toString()
+                if (crtAnswer > 3) {
 
                     imageViewReward.setImageResource(R.drawable.award)
-                    textViewComment.text="Congratulations!! You have scored" + answer + "correct"
+                    textViewComment.text = "Results: " + answer +"Correct"
+                    textView.text = "Congratulations!! You get an award"
 
+                } else {
+                    imageViewReward.setImageResource(R.drawable.download)
+                    textViewComment.text = "Results: " + answer + "Correct"
+                    textView.text = "Try harder next time"
 
                 }
-                else{
-                    imageViewReward.setImageResource(R.drawable.download)
-                    textViewComment.text="You got" + answer + "correct,Try harder next time"
-        }
             }
         })
+        button.setOnClickListener{
+            val intent = Intent(applicationContext,displayImages::class.java)
+            startActivity(intent)
+        }
     }
+
 }
