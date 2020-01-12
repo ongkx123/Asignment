@@ -29,7 +29,6 @@
         android:id="@+id/articleDescription"
         android:layout_width="347dp"
         android:layout_height="122dp"
-        android:layout_marginTop="20dp"
         android:text="@string/accountingDescription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,28 +39,24 @@
         android:layout_width="142dp"
         android:layout_height="46dp"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/button_background"
         android:text="View Video"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/articleDescription"
-        app:layout_constraintVertical_bias="0.11" />
+        app:layout_constraintTop_toBottomOf="@+id/articleDescription" />
 
     <Button
         android:id="@+id/buttonTest"
         android:layout_width="128dp"
         android:layout_height="46dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/button_background"
         android:text="Test"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toEndOf="@+id/buttonVideo"
-        app:layout_constraintTop_toBottomOf="@+id/articleDescription"
-        app:layout_constraintVertical_bias="0.11" />
+        app:layout_constraintTop_toBottomOf="@+id/articleDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

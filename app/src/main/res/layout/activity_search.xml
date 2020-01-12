@@ -53,36 +53,32 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="165dp">
 
         <Button
             android:id="@+id/buttonSignIn"
-            android:layout_width="175dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="76dp"
+            android:layout_width="135dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="8dp"
             android:background="@drawable/button_background"
             android:text="Sign In"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/buttonCreate"
-            app:layout_constraintHorizontal_bias="0.326"
+            app:layout_constraintHorizontal_bias="0.372"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/buttonCreate"
-            android:layout_width="171dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="76dp"
-            android:layout_marginEnd="16dp"
+            android:layout_width="152dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
             android:background="@drawable/button_background"
             android:text="Create An Account"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
