@@ -1,20 +1,20 @@
 package com.example.asignment.Activity
 
-import android.app.SearchManager
 import android.content.Intent
-import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import com.example.asignment.R
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.mancj.materialsearchbar.MaterialSearchBar
+import kotlinx.android.synthetic.main.activity_search.*
+
 
 class Search : AppCompatActivity() {
     private val db = FirebaseDatabase.getInstance()
@@ -68,12 +68,34 @@ class Search : AppCompatActivity() {
         lv.setOnItemClickListener(object: AdapterView.OnItemClickListener{
             override fun onItemClick(
                 parent: AdapterView<*>?,
-                view: View?,
+                view: View,
                 position: Int,
                 id: Long
             ) {
-                val intent = Intent(applicationContext, ArticleAccounting::class.java)
-                startActivity(intent)
+                //val intent = Intent(applicationContext, ArticleAccounting::class.java)
+                //startActivity(intent)
+
+                if(list.get(position).equals("What is Accounting?")){
+                    val intent = Intent(applicationContext, ArticleAccounting::class.java)
+                    startActivity(intent)
+                }else if(list.get(position).equals("What is Agricuture?")){
+                    val intent = Intent(applicationContext, ArticleAccounting::class.java)
+                    startActivity(intent)
+                }else if(list.get(position).equals("What is Agricuture?")){
+                    val intent = Intent(applicationContext, ArticleAccounting::class.java)
+                    startActivity(intent)
+                }else if(list.get(position).equals("What is Agricuture?")){
+                    val intent = Intent(applicationContext, ArticleAccounting::class.java)
+                    startActivity(intent)
+                }else if(list.get(position).equals("What is Agricuture?")){
+                    val intent = Intent(applicationContext, ArticleAccounting::class.java)
+                    startActivity(intent)
+                }
+
+
+
+
+                //Toast.makeText(this@Search,value,Toast.LENGTH_SHORT).show()
             }
 
         })
@@ -91,4 +113,5 @@ class Search : AppCompatActivity() {
 
 
     }
+
 }

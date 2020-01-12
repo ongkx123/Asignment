@@ -18,11 +18,7 @@
         <activity android:name=".Activity.DisplayArticleList" />
         <activity android:name=".Activity.UploadImage" />
         <activity android:name=".Activity.VideoAccounting" />
-        <activity android:name=".videoList" />
-        <activity android:name=".FavouriteActivity" />
-        <activity android:name=".MenuActivity" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".RetrieveImage" />
+        <activity android:name=".Activity.displayImages" />
         <activity android:name=".Activity.Login" />
         <activity android:name=".Activity.test" />
         <activity android:name=".Menu" />
