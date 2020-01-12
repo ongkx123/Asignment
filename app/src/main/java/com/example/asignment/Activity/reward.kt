@@ -65,10 +65,10 @@ class reward : AppCompatActivity() {
                 }
             }
         })
-        button.setOnClickListener{
-            val intent = Intent(applicationContext,displayImages::class.java)
-            startActivity(intent)
-        }
+        //button.setOnClickListener{
+        //    val intent = Intent(applicationContext,displayImages::class.java)
+        //    startActivity(intent)
+        //}
     }
 
 }
