@@ -1,6 +1,7 @@
 package com.example.asignment.Activity
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
@@ -164,8 +165,12 @@ class SignUp_From : AppCompatActivity() {
 
             ref.child(userID).setValue(user).addOnCompleteListener{
                 Toast.makeText(applicationContext,"Successfully register",Toast.LENGTH_LONG)
-                val intent = Intent(applicationContext,
-                    Login::class.java)
+                val intent = Intent(applicationContext, Login::class.java)
+                val sharedPreferences: SharedPreferences = getSharedPreferences("NAME", 0)
+                var editor = sharedPreferences.edit()
+                editor.putString("NAME",user.userName)
+                editor.apply()
+                editor.commit()
                 startActivity(intent)
             }
 

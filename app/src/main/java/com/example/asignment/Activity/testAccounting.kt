@@ -7,7 +7,7 @@ import android.os.Bundle
 import com.example.asignment.R
 import kotlinx.android.synthetic.main.activity_test.*
 
-class test : AppCompatActivity() {
+class testAccounting : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -13,7 +13,6 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-
 class reward : AppCompatActivity() {
     private val db = FirebaseDatabase.getInstance()
     private val profile = db.getReference("user")
@@ -30,45 +29,33 @@ class reward : AppCompatActivity() {
             val sharedPreferences = getSharedPreferences("correctAns", Context.MODE_PRIVATE)
             val crtAnswer = sharedPreferences.getInt("correctAns", 0)
             val sharedPreferenceUser = getSharedPreferences("NAME", Context.MODE_PRIVATE)
-            val sharedName = sharedPreferenceUser.getString(
-                "NAME", ""
-            )
+            val sharedName = sharedPreferenceUser.getString("NAME", "")
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 var name: String
-
-
-                for (i: DataSnapshot in dataSnapshot.children.iterator()) {
-                    val userID = profile.key.toString()
-                    name = i.child("userName").value.toString()
-
-                    if (sharedName == name) {
-                        i.getRef().child("marks").setValue(crtAnswer)
-
-                    }
-
-                }
-
-
+                val userID = profile.push().key.toString()
                 val answer = crtAnswer.toString()
+
                 if (crtAnswer > 3) {
 
+                    for (i: DataSnapshot in dataSnapshot.children.iterator()) {
+
+                        name = i.child("userName").value.toString()
+
+                        if (sharedName == name) {
+                            profile.child("marks").setValue(crtAnswer)
+                        }
+                    }
                     imageViewReward.setImageResource(R.drawable.award)
                     textViewComment.text = "Results: " + answer + "Correct"
                     textView.text = "Congratulations!! You get an award"
-
                 } else {
                     imageViewReward.setImageResource(R.drawable.download)
                     textViewComment.text = "Results: " + answer + "Correct"
                     textView.text = "Try harder next time"
-
                 }
             }
         })
-        //button.setOnClickListener{
-        //    val intent = Intent(applicationContext,displayImages::class.java)
-        //    startActivity(intent)
-        //}
     }
 
 }

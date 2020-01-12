@@ -29,4 +29,5 @@
     <string name="accountingTitle">Accounting</string>
     <string name="accountingDescription">Accounting is the process of recording financial transactions pertaining to a business. The accounting process includes summarizing, analyzing, and reporting these transactions to oversight agencies, regulators, and tax collection entities.</string>
     <string name="hintStatus">Whst is in your mind?</string>
+    <string name="article">Article</string>
 </resources>

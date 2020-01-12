@@ -1,6 +1,7 @@
 package com.example.asignment.Activity
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -34,10 +35,8 @@ class Search : AppCompatActivity() {
                 //Get firebase values
                 for(i: DataSnapshot in dataSnapshot.children.iterator()){
                     list.add(i.child("title").value.toString())
-
                 }
             }
-
 
             override fun onCancelled(error: DatabaseError) {
                 Toast.makeText(this@Search,"Error",Toast.LENGTH_SHORT).show()
@@ -72,31 +71,42 @@ class Search : AppCompatActivity() {
                 position: Int,
                 id: Long
             ) {
-                //val intent = Intent(applicationContext, ArticleAccounting::class.java)
-                //startActivity(intent)
+                val sharedPreference: SharedPreferences = getSharedPreferences("Article",0)
+                var editor = sharedPreference.edit()
+                val intent = Intent(applicationContext, Articles::class.java)
 
                 if(list.get(position).equals("What is Accounting?")){
-                    val intent = Intent(applicationContext, ArticleAccounting::class.java)
+                    editor.putString("Article","accounting")
+                    editor.commit()
+
                     startActivity(intent)
-                }else if(list.get(position).equals("What is Agricuture?")){
-                    val intent = Intent(applicationContext, ArticleAccounting::class.java)
+                }else if(list.get(position).equals("What is Agriculture?")){
+                    editor.putString("Article","agriculture")
+                    editor.commit()
+
                     startActivity(intent)
-                }else if(list.get(position).equals("What is Agricuture?")){
-                    val intent = Intent(applicationContext, ArticleAccounting::class.java)
+                }else if(list.get(position).equals("What is Business?")){
+                    editor.putString("Article","business")
+                    editor.commit()
+
                     startActivity(intent)
-                }else if(list.get(position).equals("What is Agricuture?")){
-                    val intent = Intent(applicationContext, ArticleAccounting::class.java)
+                }else if(list.get(position).equals("What is Software Engineering?")){
+                    editor.putString("Article","software")
+                    editor.commit()
+
                     startActivity(intent)
-                }else if(list.get(position).equals("What is Agricuture?")){
-                    val intent = Intent(applicationContext, ArticleAccounting::class.java)
+                }else if(list.get(position).equals("What does a doctor do?")){
+                    editor.putString("Article","medical")
+                    editor.commit()
+
+                    startActivity(intent)
+                }else if(list.get(position).equals("What is a mechanic?")){
+                    editor.putString("Article","mechanic")
+                    editor.commit()
+
                     startActivity(intent)
                 }
-
-
-
-                //Toast.makeText(this@Search,value,Toast.LENGTH_SHORT).show()
             }
-
         })
 
         buttonSignIn.setOnClickListener(){
@@ -107,18 +117,6 @@ class Search : AppCompatActivity() {
             val intent = Intent(applicationContext, SignUp_From::class.java)
             startActivity(intent)
         }
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
 }

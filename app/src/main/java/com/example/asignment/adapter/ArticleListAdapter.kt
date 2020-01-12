@@ -9,9 +9,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.asignment.Activity.ArticleAccounting
-import com.example.asignment.Activity.Login
-import com.example.asignment.Activity.VideoAccounting
+import com.example.asignment.Activity.Articles
 import com.example.asignment.Class.Article
 import com.example.asignment.R
 import com.squareup.picasso.Picasso
@@ -40,7 +38,7 @@ class ArticleListAdapter internal constructor(context: Context): RecyclerView.Ad
         holder.articleTitle.text = articleRecord.title
 
         holder.articleTitle.setOnClickListener{
-            val intent = Intent(context1,  ArticleAccounting::class.java)
+            val intent = Intent(context1,  Articles::class.java)
             context1.startActivity(intent)
         }
 
