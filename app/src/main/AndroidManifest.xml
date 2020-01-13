@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Activity.ListMenu"
-            android:label="Menu"></activity>
+            android:label="Collections"></activity>
         <activity
             android:name=".Activity.displayImages"
             android:label="Course" />
@@ -31,7 +31,8 @@
         <activity
             android:name=".Activity.testAccounting"
             android:label="Test" />
-        <activity android:name=".Menu" />
+        <activity android:name=".Menu"
+            />
         <activity android:name=".FragmentActivity" />
         <activity
             android:name=".Activity.reward"
