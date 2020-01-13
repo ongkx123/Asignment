@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.ListMenu"></activity>
+        <activity android:name=".Activity.ListMenu"
+            android:label="Menu"></activity>
         <activity
             android:name=".Activity.displayImages"
             android:label="Course" />

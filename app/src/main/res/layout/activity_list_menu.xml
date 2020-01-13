@@ -8,26 +8,53 @@
 
     <Button
         android:id="@+id/buttonArticle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="114dp"
+        android:layout_height="42dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/button_background"
         android:text="@string/article"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
 
     <Button
         android:id="@+id/buttonVideo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="109dp"
+        android:layout_height="42dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="156dp"
         android:layout_marginEnd="8dp"
-        android:text="Button"
+        android:background="@drawable/button_background"
+        android:text="Video"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonArticle" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView10"
+        app:layout_constraintVertical_bias="0.214" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/article" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="169dp"
+        android:layout_height="118dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonArticle"
+        app:srcCompat="@drawable/video" />
 </androidx.constraintlayout.widget.ConstraintLayout>
