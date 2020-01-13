@@ -18,13 +18,16 @@
         <activity
             android:name=".Activity.displayImages"
             android:label="Course" />
-        <activity android:name=".Activity.DisplayVideoList" />
-        <activity android:name=".Activity.DisplayArticleList" />
+        <activity android:name=".Activity.DisplayVideoList"
+            android:label="Video"/>
+        <activity android:name=".Activity.DisplayArticleList"
+            android:label="Article"/>
         <activity android:name=".Activity.UploadImage" />
         <activity
             android:name=".Activity.VideoAccounting"
             android:label="Accounting" />
-        <activity android:name=".Activity.Login" />
+        <activity android:name=".Activity.Login"
+            android:label="Login"/>
         <activity
             android:name=".Activity.testAccounting"
             android:label="Test" />
@@ -42,7 +45,7 @@
         <activity android:name=".MainActivity" />
         <activity
             android:name=".Activity.Search"
-            android:label="Search">
+            android:label="P&amp;D Learning">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
