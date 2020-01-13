@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="210dp"
-        android:layout_height="207dp"
+        android:layout_width="313dp"
+        android:layout_height="307dp"
         android:layout_gravity="center"
         android:src="@drawable/logo"
         tools:srcCompat="@tools:sample/avatars" />
@@ -22,63 +22,44 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="354dp"
-        android:layout_height="48dp"
+        android:layout_width="317dp"
+        android:layout_height="91dp"
         android:layout_gravity="center"
-        android:text="Online Learning is not the next big things,It is the now big things" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="match_parent"
-        android:layout_height="8dp" />
-
-    <com.mancj.materialsearchbar.MaterialSearchBar
-        android:id="@+id/searchBar"
-        style="@style/MaterialSearchBarLight"
-        android:layout_width="354dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-
-        app:mt_hint="Custom hint"
-        app:mt_maxSuggestionsCount="10"
-        app:mt_placeholder="@string/action_search"
-        app:mt_speechMode="true" />
-
-    <ListView
-        android:id="@+id/mListView"
-        android:layout_width="match_parent"
-        android:layout_height="115dp">
-
-    </ListView>
+        android:text="Online Learning is not the next big things,It is the now big things"
+        android:textSize="24dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="165dp">
+        android:layout_height="266dp">
 
         <Button
             android:id="@+id/buttonSignIn"
             android:layout_width="135dp"
             android:layout_height="51dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="80dp"
             android:background="@drawable/button_background"
             android:text="Sign In"
             android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/buttonCreate"
-            app:layout_constraintHorizontal_bias="0.402"
+            app:layout_constraintHorizontal_bias="0.43"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/buttonCreate"
             android:layout_width="152dp"
             android:layout_height="51dp"
-            android:layout_marginTop="36dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="48dp"
             android:background="@drawable/button_background"
             android:text="Create An Account"
             android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

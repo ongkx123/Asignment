@@ -63,14 +63,15 @@ class FragmentActivity : AppCompatActivity() {
                 }
 
                 R.id.navigationLove -> {
-                    val fragment= FavouriteFragment()
-                    val fragmentManager = this.supportFragmentManager
-                    val fragmentTransaction = fragmentManager.beginTransaction()
-                    fragmentTransaction.replace(container.id,fragment,null)
-                    fragmentTransaction.addToBackStack(null)
-                    fragmentTransaction.commit()
+            val fragment= FavouriteFragment()
+            val fragmentManager = this.supportFragmentManager
+            val fragmentTransaction = fragmentManager.beginTransaction()
+            fragmentTransaction.replace(container.id,fragment,null)
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
                 }
-            }
+
+        }
 
             true
         }
