@@ -2,7 +2,6 @@ package com.example.asignment.Activity
 
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -11,10 +10,8 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_accounting.*
 import kotlinx.android.synthetic.main.activity_accounting.bottomNavigationView
-import kotlinx.android.synthetic.main.activity_artivle_accunting.*
 
 
 class VideoAccounting : AppCompatActivity() {
@@ -38,7 +35,7 @@ class VideoAccounting : AppCompatActivity() {
                     val intent = Intent(applicationContext, displayImages::class.java)
                     startActivity(intent)
                 }
-                R.id.navigationLove ->{
+                R.id.navigationList ->{
                     val intent = Intent(applicationContext,ListMenu::class.java)
                     startActivity(intent)
 

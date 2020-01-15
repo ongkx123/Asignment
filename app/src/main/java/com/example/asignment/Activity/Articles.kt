@@ -97,7 +97,7 @@ class Articles : AppCompatActivity() {
                     val intent = Intent(applicationContext,displayImages::class.java)
                     startActivity(intent)
                 }
-                R.id.navigationLove ->{
+                R.id.navigationList ->{
                     val intent = Intent(applicationContext,ListMenu::class.java)
                     startActivity(intent)
 

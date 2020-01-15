@@ -1,15 +1,8 @@
 package com.example.asignment
 
 import android.os.Bundle
-import android.view.Menu
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentTransaction
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import kotlinx.android.synthetic.main.activity_fragment.*
 
 class FragmentActivity : AppCompatActivity() {
@@ -62,7 +55,7 @@ class FragmentActivity : AppCompatActivity() {
                     fragmentTransaction.commit()
                 }
 
-                R.id.navigationLove -> {
+                R.id.navigationList -> {
             val fragment= FavouriteFragment()
             val fragmentManager = this.supportFragmentManager
             val fragmentTransaction = fragmentManager.beginTransaction()
